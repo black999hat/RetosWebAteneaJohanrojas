@@ -50,4 +50,5 @@ public class Score {
     public void setReservation(Reservation reservation) {
         this.reservation = reservation;
     }
+    //johan.rojas.at@usa.edu.co
 }
