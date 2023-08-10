@@ -1,7 +1,7 @@
 package com.example.reto3johanrojas.Model;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-import jakarta.persistence.*;
+import javax.persistence.*;
 
 import java.util.List;
 

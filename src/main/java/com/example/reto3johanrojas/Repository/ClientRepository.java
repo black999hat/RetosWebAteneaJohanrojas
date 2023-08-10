@@ -13,10 +13,10 @@ public class ClientRepository {
     @Autowired
     private ClientCrudRepository clientCrudRepository;
 
-    public List<com.example.reto3johanrojas.Model.Client> findAll(){
-        return (List<com.example.reto3johanrojas.Model.Client>) clientCrudRepository.findAll();
+    public List<Client> findAll(){
+        return (List<Client>) clientCrudRepository.findAll();
     }
-    public Optional<com.example.reto3johanrojas.Model.Client> getClient(int id){
+    public Optional<Client> getClient(int id){
         return clientCrudRepository.findById(id);
 
     }

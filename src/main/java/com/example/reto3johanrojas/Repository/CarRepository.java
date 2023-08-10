@@ -13,9 +13,7 @@ public class CarRepository {
     @Autowired
     private CarCrudRepository carCrudRepository;
 
-    public List<Car> findAll(){
-
-        return (List<Car>) carCrudRepository.findAll();
+    public List<Car> findAll(){return (List<Car>) carCrudRepository.findAll();
     }
     public Optional<Car>  getCar(int id){
         return carCrudRepository.findById(id);

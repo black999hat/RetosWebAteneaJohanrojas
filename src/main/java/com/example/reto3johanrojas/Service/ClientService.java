@@ -59,7 +59,7 @@ public class ClientService {
             return client;
         }
     }
-    public  boolean deleteCar(int id){
+    public  boolean delete(int id){
         Boolean respuesta = getClient(id).map(client -> {
             clientRepository.delete(client);
             return true;

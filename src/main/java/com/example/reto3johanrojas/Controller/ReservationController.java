@@ -1,6 +1,7 @@
 package com.example.reto3johanrojas.Controller;
 
 import com.example.reto3johanrojas.Model.Reservation;
+import com.example.reto3johanrojas.Model.Reservation;
 import com.example.reto3johanrojas.Service.ReservationService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -32,5 +33,17 @@ public class ReservationController {
         return reservationService.save(reservation);
     }
 
+    @PutMapping("/update")
+    @ResponseStatus(HttpStatus.CREATED)
+    public Reservation update (@RequestBody Reservation reservation){
+        return reservationService.update(reservation);
+
+    }
+
+    @DeleteMapping("/{id}")
+    @ResponseStatus(HttpStatus.NO_CONTENT)
+    public boolean delete(@PathVariable int id){
+        return reservationService.delete(id);
+    }
 }
 

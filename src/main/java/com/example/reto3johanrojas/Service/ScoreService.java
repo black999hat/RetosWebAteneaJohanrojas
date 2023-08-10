@@ -52,7 +52,12 @@ public class ScoreService {
             return score;
         }
     }
-    public  boolean deleteScore(int id){
+    public  boolean delete(int id){
+
+        List<Score> a = getAll();
+        a.forEach(score -> {
+            System.out.println(score.getStars());
+        });
         Boolean respuesta = getScore(id).map(score -> {
             scoreRepository.delete(score);
             return true;

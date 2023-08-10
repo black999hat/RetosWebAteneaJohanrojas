@@ -49,7 +49,7 @@ public class GamaService {
             return gama;
         }
     }
-    public  boolean deleteGama(Integer id){
+    public  boolean delete(Integer id){
         Boolean respuesta = getGama(id).map(gama -> {
             gamaRepository.delete(gama);
             return true;

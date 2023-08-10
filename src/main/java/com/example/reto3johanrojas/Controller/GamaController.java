@@ -1,6 +1,7 @@
 package com.example.reto3johanrojas.Controller;
 
 import com.example.reto3johanrojas.Model.Gama;
+import com.example.reto3johanrojas.Model.Gama;
 import com.example.reto3johanrojas.Service.GamaService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -33,5 +34,17 @@ public class GamaController {
         return gamaService.save(gama);
     }
 
+    @PutMapping("/update")
+    @ResponseStatus(HttpStatus.CREATED)
+    public Gama update (@RequestBody Gama gama){
+        return gamaService.update(gama);
+
+    }
+
+    @DeleteMapping("/{id}")
+    @ResponseStatus(HttpStatus.NO_CONTENT)
+    public boolean delete(@PathVariable int id){
+        return gamaService.delete(id);
+    }
 }
 
